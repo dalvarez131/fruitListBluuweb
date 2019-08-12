@@ -1,0 +1,21 @@
+#app {
+    background-color: #e8f4ea;
+    color: #34495e;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+li {
+    font-size: 20px;
+}
+
+input {
+    background-color: white;
+}
+
+button {
+    background-color: #34495e;
+    color: #e8f4ea;
+}

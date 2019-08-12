@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueFruits</title>
+    <link rel="shortcut icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyZtz7BCHHKHka-tUA58qGukotNePeawJDkwwWPDAzpLYRqfS"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <input type="text" v-model="inputFruit" @keyup.enter="addFruit()" >
+        <button @click="addFruit()">Ingresar</button>
+        <ul>
+            <li v-for="fruit of fruits">{{ fruit.nombre }}  -  {{ fruit.cantidad }}
+                <button @click="fruit.cantidad++">+</button>
+                <button @click="fruit.cantidad>0?fruit.cantidad--:fruit.cantidad">-</button>
+                <span v-if="fruit.cantidad <= 0"> - Sin stock</span>
+            </li>
+        </ul>
+        <h2>Total: {{ total() }}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type = "text/javascript" src = "index.js" ></script>
+</body>
+</html>
